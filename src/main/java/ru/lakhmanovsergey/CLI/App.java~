@@ -1,0 +1,19 @@
+package ru.lakhmanovsergey.CLI;
+
+import org.apache.commons.cli.*;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args ) throws ParseException {
+        CommandLineParser parser=new DefaultParser();
+        Options options=new Options();
+        options.addOption("t","test",true,"my first command line option");
+        CommandLine line=parser.parse(options,args);
+        if(line.hasOption("t")) System.out.println("line = " + line.getOptionValue("t"));
+        System.out.println( "Hello World!" );
+    }
+}
