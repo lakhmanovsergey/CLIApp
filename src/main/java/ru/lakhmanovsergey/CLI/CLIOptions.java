@@ -8,6 +8,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Created by lsp on 10.02.16.
@@ -63,9 +65,12 @@ public class CLIOptions {
     static Calendar getDate() {
         if(!commandLine.hasOption("d")) return null;
         String sDate=commandLine.getOptionValue("d");
-        if("13-0".equals(sDate)) throw new IllegalArgumentException("uncorrect date = "+sDate);
+        String regex="[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}"; //регулярное выражение для даты
+        Matcher matcher= Pattern.compile(regex).matcher(sDate);
+        if (!matcher.matches()) throw new IllegalArgumentException("uncorrect date = "+sDate);
         String[] masStr=sDate.split("-");
         int day= Integer.parseInt(masStr[0]);
+        if (day<=0||day>31) throw new IllegalArgumentException("uncorrect date = "+sDate);
         int month= Integer.parseInt(masStr[1]);
         int year= Integer.parseInt(masStr[2]);
         Calendar date=new GregorianCalendar(year,month-1,day);
