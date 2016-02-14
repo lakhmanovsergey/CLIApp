@@ -70,10 +70,21 @@ public class CLIOptions {
         if (!matcher.matches()) throw new IllegalArgumentException("uncorrect date = "+sDate);
         String[] masStr=sDate.split("-");
         int day= Integer.parseInt(masStr[0]);
-        if (day<=0||day>31) throw new IllegalArgumentException("uncorrect date = "+sDate);
+        if (day<=0||day>31) throw new IllegalArgumentException("uncorrect date = " + sDate+ " from 1 to 31");
         int month= Integer.parseInt(masStr[1]);
+        if (month<=0||month>12) throw new IllegalArgumentException("uncorrect date = "+sDate+" month from 1 to 12");
+        if((month==4||month==6||month==9||month==11)&&day==31) throw new IllegalArgumentException("uncorrect date = " + sDate+ " from 1 to 30");
+        if(month==2&&day==30) throw new IllegalArgumentException("uncorrect date = " + sDate+ " from 1 to 29");
         int year= Integer.parseInt(masStr[2]);
-        Calendar date=new GregorianCalendar(year,month-1,day);
+        if (year<=0||year>9999) throw new IllegalArgumentException("uncorrect date = "+sDate+" year from 1 to 9999");
+        GregorianCalendar date=new GregorianCalendar(year,month-1,day);
+        if(!date.isLeapYear(year)&&month==2&&day==29)throw new IllegalArgumentException("uncorrect date = "+sDate+" day from 1 to 28");
         return date;
+    }
+    static File getFile(){
+        if(!commandLine.hasOption("f")) return null;
+        String sDate=commandLine.getOptionValue("f");
+        File file=new File(sDate);
+        return file;
     }
 }
