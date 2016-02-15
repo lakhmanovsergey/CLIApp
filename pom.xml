@@ -15,12 +15,6 @@
   </properties>
   <!--зависимости проекта-->
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
       <dependency>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -51,6 +45,11 @@
           <artifactId>junit</artifactId>
           <version>4.12</version>
           <scope>test</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.tngtech.java</groupId>
+          <artifactId>junit-dataprovider</artifactId>
+          <version>1.9.3</version>
       </dependency>
   </dependencies>
 
