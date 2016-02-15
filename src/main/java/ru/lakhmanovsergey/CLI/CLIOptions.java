@@ -85,6 +85,7 @@ public class CLIOptions {
         if(!commandLine.hasOption("f")) return null;
         String sDate=commandLine.getOptionValue("f");
         File file=new File(sDate);
-        return file;
+        if(!file.exists()) throw new IllegalArgumentException("uncorrect filename = "+sDate);
+        return file.getAbsoluteFile();
     }
 }

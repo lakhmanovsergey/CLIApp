@@ -22,11 +22,12 @@ public class CLIOptionsTest extends Assert{
         return new Object[][]{
                 {null,null,null},
                 {new String[] {"-h"},null,null},
-                {new String[] {"-f", "test"}, null,null},
                 {new String[] {"-d", "13-05-2014"}, new GregorianCalendar(2014,04,13 ),null},
                 {new String[] {"-d", "01-12-1538"}, new GregorianCalendar(1538,11,01 ),null},
                 {new String[] {"-d", "31-05-1971"}, new GregorianCalendar(1971,04,31 ),null},
                 {new String[] {"-d", "29-2-2016"}, new GregorianCalendar(2016,01,29 ),null},
+                {new String[] {"-f", "/Users/lsp/IdeaProjects/CLIApp/pom.xml"},null,new File("/Users/lsp/IdeaProjects/CLIApp/pom.xml")},
+                {new String[] {"-f", "pom.xml"},null,new File("/Users/lsp/IdeaProjects/CLIApp/pom.xml")},
         };
     }
     @DataProvider
@@ -39,6 +40,10 @@ public class CLIOptionsTest extends Assert{
                 {new String[]{"-d","13.11.2018"}},
                 {new String[]{"-d","31-04-2014"}},
                 {new String[]{"-d","29-02-2013"}},
+                {new String[]{"-f","blablabla"}},
+                {new String[]{"-f","&65*%"}},
+                {new String[]{"-f","ggffdd kkkl;ll"}},
+                {new String[]{"-f","test"}},
         };
     }
     @Test
