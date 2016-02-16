@@ -1,6 +1,6 @@
 package ru.lakhmanovsergey.CLI;
 
-import com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser;
+//import com.sun.xml.internal.xsom.impl.util.SchemaTreeTraverser;
 import com.tngtech.java.junit.dataprovider.DataProvider;
 import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 import com.tngtech.java.junit.dataprovider.UseDataProvider;
@@ -12,6 +12,9 @@ import org.junit.runner.RunWith;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.Month;
 import java.util.GregorianCalendar;
 
 import static org.junit.Assert.*;
@@ -20,14 +23,33 @@ public class CLIOptionsTest extends Assert{
     @DataProvider
     public static Object[][] cliOptionsData(){
         return new Object[][]{
-                {null,null,null},
-                {new String[] {"-h"},null,null},
-                {new String[] {"-d", "13-05-2014"}, new GregorianCalendar(2014,04,13 ),null},
-                {new String[] {"-d", "01-12-1538"}, new GregorianCalendar(1538,11,01 ),null},
-                {new String[] {"-d", "31-05-1971"}, new GregorianCalendar(1971,04,31 ),null},
-                {new String[] {"-d", "29-2-2016"}, new GregorianCalendar(2016,01,29 ),null},
-                {new String[] {"-f", "/Users/lsp/IdeaProjects/CLIApp/pom.xml"},null,new File("/Users/lsp/IdeaProjects/CLIApp/pom.xml")},
-                {new String[] {"-f", "pom.xml"},null,new File("/Users/lsp/IdeaProjects/CLIApp/pom.xml")},
+                {null,null,null,null},
+                {new String[] {"-h"},
+                        null,null,null},
+                {new String[] {"-d", "13-05-2014","-t","13-20-40"},
+                        LocalDate.of(2014, Month.MAY,13),
+                        null,
+                        LocalTime.of(13,20,40)},
+                {new String[] {"-d", "01-12-1538","-t","11-00"},
+                        LocalDate.of(1538,Month.DECEMBER,01),
+                        null,
+                        LocalTime.of(11,00)},
+                {new String[] {"-d", "31-05-1971","-t","23-5-20"},
+                        LocalDate.of(1971,Month.MAY,31),
+                        null,
+                        LocalTime.of(23,05,20)},
+                {new String[] {"-d", "29-2-2016","-t","00-30"},
+                        LocalDate.of(2016,Month.FEBRUARY,29),
+                        null,
+                        LocalTime.of(00,30)},
+                {new String[] {"-f", "/home/lsp/IdeaProjects/CLIApp/pom.xml"},
+                        null,
+                        new File("/home/lsp/IdeaProjects/CLIApp/pom.xml"),
+                        null},
+                {new String[] {"-f", "pom.xml"},
+                        null,
+                        new File("/home/lsp/IdeaProjects/CLIApp/pom.xml"),
+                        null},
         };
     }
     @DataProvider
@@ -44,17 +66,27 @@ public class CLIOptionsTest extends Assert{
                 {new String[]{"-f","&65*%"}},
                 {new String[]{"-f","ggffdd kkkl;ll"}},
                 {new String[]{"-f","test"}},
+                {new String[]{"-t","test"}},
+                {new String[]{"-t","38-11-40"}},
+                {new String[]{"-t","23-72"}},
+                {new String[]{"-t","10-55-77"}},
         };
     }
     @Test
     @UseDataProvider("cliOptionsData")
-    public void getDataTest(String[] input, GregorianCalendar date, File file) throws ParseException {
+    public void getDataTest(String[] input, LocalDate date, File file,LocalTime time) throws ParseException {
       CLIOptions.setCommandLine(input);
         assertEquals(date,CLIOptions.getDate());
     }
     @Test
     @UseDataProvider("cliOptionsData")
-    public void getFileTest(String[] input,GregorianCalendar date,File file) throws ParseException {
+    public void getTimeTest(String[] input, LocalDate date, File file, LocalTime time) throws ParseException {
+        CLIOptions.setCommandLine(input);
+        assertEquals(time,CLIOptions.getTime());
+    }
+    @Test
+    @UseDataProvider("cliOptionsData")
+    public void getFileTest(String[] input, LocalDate date,File file,LocalTime time) throws ParseException {
         CLIOptions.setCommandLine(input);
         assertEquals(file,CLIOptions.getFile());
     }
@@ -64,5 +96,6 @@ public class CLIOptionsTest extends Assert{
         CLIOptions.setCommandLine(input);
         CLIOptions.getDate();
         CLIOptions.getFile();
+        CLIOptions.getTime();
     }
 }

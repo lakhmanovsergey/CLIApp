@@ -4,6 +4,12 @@ import org.apache.commons.cli.*;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.text.DateFormat;
+import java.time.DateTimeException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -38,19 +44,18 @@ public class CLIOptions {
 
     CommandLineParser parser = new DefaultParser(); // объект для разбора командной строки
     options = new Options();//Опции командной строки, можно создавать по отдельности
-    /*
-    options.addOption("t", // короткая опция
-            "test", // длинная опция -ааа=ббббб
-            true, // если аргумент обязателен
-            "my first command line option" //дескриптор, выводится в хелпе
-    );
-    */
     options.addOption("h", "help", false, "print this message");
-    options.addOption(Option.builder("d")
-            .longOpt("date")
-            .desc("date dd-mm-yyyy")
+    options.addOption(Option.builder("d") // короткая опция
+            .longOpt("date") // длинная опция -ааа=ббббб
+            .desc("date dd-mm-yyyy")  //дескриптор, выводится в хелпе
+            .hasArg() // если аргумент обязателен
+            .argName("DATE") // тип аргумента, выводится в хелпе
+            .build());
+    options.addOption(Option.builder("t")
+            .longOpt("time")
+            .desc("time of day hh-mm-ss")
             .hasArg()
-            .argName("DATE")
+            .argName("TIME")
             .build());
     options.addOption(Option.builder("f")
             .hasArg()
@@ -62,7 +67,7 @@ public class CLIOptions {
         if(commandLine.hasOption("h")) printHelp(options);
     }
 
-    static Calendar getDate() {
+    static LocalDate getDate() {
         if(!commandLine.hasOption("d")) return null;
         String sDate=commandLine.getOptionValue("d");
         String regex="[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}"; //регулярное выражение для даты
@@ -70,16 +75,14 @@ public class CLIOptions {
         if (!matcher.matches()) throw new IllegalArgumentException("uncorrect date = "+sDate);
         String[] masStr=sDate.split("-");
         int day= Integer.parseInt(masStr[0]);
-        if (day<=0||day>31) throw new IllegalArgumentException("uncorrect date = " + sDate+ " from 1 to 31");
         int month= Integer.parseInt(masStr[1]);
-        if (month<=0||month>12) throw new IllegalArgumentException("uncorrect date = "+sDate+" month from 1 to 12");
-        if((month==4||month==6||month==9||month==11)&&day==31) throw new IllegalArgumentException("uncorrect date = " + sDate+ " from 1 to 30");
-        if(month==2&&day==30) throw new IllegalArgumentException("uncorrect date = " + sDate+ " from 1 to 29");
         int year= Integer.parseInt(masStr[2]);
-        if (year<=0||year>9999) throw new IllegalArgumentException("uncorrect date = "+sDate+" year from 1 to 9999");
-        GregorianCalendar date=new GregorianCalendar(year,month-1,day);
-        if(!date.isLeapYear(year)&&month==2&&day==29)throw new IllegalArgumentException("uncorrect date = "+sDate+" day from 1 to 28");
-        return date;
+        try{
+            LocalDate date=LocalDate.of(year,month,day);
+            return date;
+        }catch (DateTimeException e){
+            throw new IllegalArgumentException("uncorrect date = "+sDate+" "+e.getMessage());
+        }
     }
     static File getFile(){
         if(!commandLine.hasOption("f")) return null;
@@ -87,5 +90,25 @@ public class CLIOptions {
         File file=new File(sDate);
         if(!file.exists()) throw new IllegalArgumentException("uncorrect filename = "+sDate);
         return file.getAbsoluteFile();
+    }
+
+    public static LocalTime getTime() {
+        if(!commandLine.hasOption("t")) return null;
+        String sTime=commandLine.getOptionValue("t");
+        String regex="[0-9]{1,2}-[0-9]{1,2}(-[0-9]{1,2})?"; //регулярное выражение для времени
+        Matcher matcher= Pattern.compile(regex).matcher(sTime);
+        if (!matcher.matches()) throw new IllegalArgumentException("uncorrect time = "+sTime);
+        String[] masStr=sTime.split("-");
+        int hour= Integer.parseInt(masStr[0]);
+        int min= Integer.parseInt(masStr[1]);
+        int sec=0;
+        if (masStr.length==3)sec = Integer.parseInt(masStr[2]);
+        try{
+            LocalTime time=(masStr.length<3)?LocalTime.of(hour,min):LocalTime.of(hour,min,sec);
+            return time;
+        }catch (DateTimeException e){
+            throw new IllegalArgumentException("uncorrect time = "+sTime+" "+e.getMessage());
+        }
+
     }
 }
