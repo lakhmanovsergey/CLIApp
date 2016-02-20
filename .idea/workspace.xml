@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ea07a02-fa02-49a4-918d-7ed056f7cf14" name="Default" comment="">
+    <list default="true" id="5ea07a02-fa02-49a4-918d-7ed056f7cf14" name="Default" comment="date time file command line">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CLIApp-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/CLIApp-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/App.class" afterPath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-CLIApp-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/original-CLIApp-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/App.java" afterPath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/SimpleServerSocket.java" afterPath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/SimpleServerSocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/SimpleServerSocketTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/SimpleServerSocketTest.java" />
     </list>
     <ignored path="CLIApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -886,7 +882,7 @@
       <workItem from="1455862008098" duration="6057000" />
       <workItem from="1455894093858" duration="13000" />
       <workItem from="1455894174632" duration="2234000" />
-      <workItem from="1455973980277" duration="3789000" />
+      <workItem from="1455973980277" duration="3860000" />
     </task>
     <task id="LOCAL-00001" summary="date time file command line">
       <created>1455634311782</created>
@@ -924,7 +920,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455799758824</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="date time file command line">
+      <created>1455977932288</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1455977932288</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -960,7 +962,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54680000" />
+    <option name="totallyTimeSpent" value="54751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="24" width="1535" height="1071" extended-state="6" />
