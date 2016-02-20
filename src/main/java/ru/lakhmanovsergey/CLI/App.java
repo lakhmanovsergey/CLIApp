@@ -14,7 +14,7 @@ public class App
         //CLIOptions.setCommandLine(args);
         //CLIOptions.getDate().format(DateTimeFormatter.BASIC_ISO_DATE);
         SimpleServerSocket serverSocket=new SimpleServerSocket(8888);
-        serverSocket.showIn();
+        serverSocket.loopSocket();
     }
 }
 

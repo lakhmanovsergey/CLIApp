@@ -7,10 +7,7 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-/**
- * Created by lsp on 17.02.16.
- */
-public class SimpleServerSocket {
+public class SimpleServerSocket implements Runnable{
     private ServerSocket serverSocket;
     private Socket clientSocket;
     private PrintWriter out;
@@ -18,7 +15,7 @@ public class SimpleServerSocket {
     public SimpleServerSocket(int port) {
         try {
             serverSocket = new ServerSocket(port);
-            System.out.println("Server socket ready = " + serverSocket.toString());
+            //System.out.println("Server socket ready = " + serverSocket.toString());
         }catch (IOException e){
             System.out.println("can not create socket port = "+port+" "+e.getMessage());
         }
@@ -28,7 +25,7 @@ public class SimpleServerSocket {
         if(in!=null)return in;
         try{
             clientSocket = serverSocket.accept();
-            System.out.println("Server socket client accept = " + clientSocket.toString());
+            //System.out.println("Server socket client accept = " + clientSocket.toString());
         } catch (IOException e) {
             System.out.println("can not accept to socket = "+e.getMessage());
         }
@@ -47,7 +44,7 @@ public class SimpleServerSocket {
         if(out!=null)return out;
         try{
             clientSocket = serverSocket.accept();
-            System.out.println("Server socket client accept = " + clientSocket.toString());
+            //System.out.println("Server socket client accept = " + clientSocket.toString());
         } catch (IOException e) {
             System.out.println("can not accept to socket = "+e.getMessage());
         }
@@ -60,18 +57,30 @@ public class SimpleServerSocket {
         return out;
     }
 
-    public void loopSocket() throws IOException {
-            System.out.println("SimpleServerSocket.loopSocket");
+    public boolean loopSocket() throws IOException {
+        //System.out.println("SimpleServerSocket.loopSocket");
+        while (true) {
             String line = getIn().readLine();
+            if(line.equalsIgnoreCase("quit")) return true;
             getOut().println(line);
+        }
     }
     public void showIn() throws IOException {
-        System.out.println("listen socket");
+        //System.out.println("listen socket");
         String line=getIn().readLine();
         System.out.println(line);
     }
     public void closeSocket() throws IOException {
         //clientSocket.close();
         serverSocket.close();
+    }
+
+    @Override
+    public void run() {
+        try {
+            loopSocket();
+        } catch (IOException e) {
+            System.out.println("can not ran thread: "+e.getMessage());
+        }
     }
 }

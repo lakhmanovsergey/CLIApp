@@ -1,6 +1,8 @@
 package ru.lakhmanovsergey.CLI;
 
 import org.junit.*;
+import org.junit.rules.Timeout;
+import org.junit.runners.MethodSorters;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -12,15 +14,18 @@ import java.net.UnknownHostException;
 
 import static org.junit.Assert.*;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SimpleServerSocketTest {
     private SimpleServerSocket serverSocket;
     private Socket client;
     PrintWriter out;
     BufferedReader in;
+    @Rule
+    public final Timeout globalTimeout = Timeout.seconds(1);
     @Before
     public void init() throws IOException {
-        serverSocket = new SimpleServerSocket(8889);
-        client = new Socket(InetAddress.getLocalHost(), 8889);
+        serverSocket = new SimpleServerSocket(8888);
+        client = new Socket(InetAddress.getLocalHost(), 8888);
         out = new PrintWriter(client.getOutputStream());
         in = new BufferedReader(new InputStreamReader(client.getInputStream()));
     }
@@ -32,29 +37,30 @@ public class SimpleServerSocketTest {
         client.close();
     }
     @Test
-    public void testGetIn() throws Exception {
-        out.println("test");
-        out.flush();
+    public void a1testGetIn() throws Exception {
+        out.println("test");out.flush();
         assertEquals("test",serverSocket.getIn().readLine());
+        out.println("hello");out.flush();
+        assertEquals("hello",serverSocket.getIn().readLine());
     }
 
     @Test
-    public void testGetOut() throws Exception {
+    public void a2testGetOut() throws Exception {
         serverSocket.getOut().println("test");
         assertEquals("test",in.readLine());
+        serverSocket.getOut().println("hello");
+        assertEquals("hello",in.readLine());
     }
 
     @Test
-    public void testLoopSocket() throws Exception {
-        out.println("test");
-        out.flush();
-        serverSocket.loopSocket();
+    public void a3testLoopSocket() throws Exception {
+        Thread thread=new Thread(serverSocket);
+        thread.start();
+        assertTrue(thread.isAlive());
+        out.println("test");out.flush();
         assertEquals("test",in.readLine());
-    }
-    //@Test
-    public void testShowIn() throws IOException {
-        out.println("test");
-        out.flush();
-        serverSocket.showIn();
+        out.println("quit");out.flush();
+        Thread.sleep(10);
+        assertFalse(thread.isAlive());
     }
 }
