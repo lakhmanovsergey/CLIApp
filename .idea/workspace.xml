@@ -1,23 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5ea07a02-fa02-49a4-918d-7ed056f7cf14" name="Default" comment="date time file command line">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_1_10_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_1.xml" />
+    <list default="true" id="5ea07a02-fa02-49a4-918d-7ed056f7cf14" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/CLIApp-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/CLIApp-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/App.class" afterPath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/CLIOptions.class" afterPath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/CLIOptions.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/original-CLIApp-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/target/original-CLIApp-1.0-SNAPSHOT.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/ru/lakhmanovsergey/CLI/CLIOptionsTest.class" afterPath="$PROJECT_DIR$/target/test-classes/ru/lakhmanovsergey/CLI/CLIOptionsTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CLIApp.iml" afterPath="$PROJECT_DIR$/CLIApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/App.java" afterPath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/App.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/CLIOptions.java" afterPath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/CLIOptions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/SimpleServerSocket.java" afterPath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/SimpleServerSocket.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/CLIOptionsTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/CLIOptionsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/SimpleServerSocketTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/SimpleServerSocketTest.java" />
     </list>
     <ignored path="CLIApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -840,7 +830,7 @@
       <workItem from="1456757842838" duration="3780000" />
       <workItem from="1456829133446" duration="6304000" />
       <workItem from="1458657078490" duration="1965000" />
-      <workItem from="1458743668056" duration="10269000" />
+      <workItem from="1458743668056" duration="10334000" />
     </task>
     <task id="LOCAL-00001" summary="date time file command line">
       <created>1455634311782</created>
@@ -884,7 +874,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455977932288</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="date time file command line">
+      <created>1458834075932</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1458834075932</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -920,11 +916,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77752000" />
+    <option name="totallyTimeSpent" value="77817000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1961" y="24" width="1559" height="1071" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1345,6 +1341,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33298862">
           <caret line="441" column="19" selection-start-line="441" selection-start-column="19" selection-end-line="441" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1359,6 +1356,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41907513">
           <caret line="167" column="26" selection-start-line="167" selection-start-column="26" selection-end-line="167" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1366,6 +1364,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.44075143">
           <caret line="511" column="25" selection-start-line="511" selection-start-column="25" selection-end-line="511" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
