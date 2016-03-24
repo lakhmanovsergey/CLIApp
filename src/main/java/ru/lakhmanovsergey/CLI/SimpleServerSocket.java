@@ -6,12 +6,13 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.io.Serializable;
 
-public class SimpleServerSocket implements Runnable{
-    private ServerSocket serverSocket;
-    private Socket clientSocket;
-    private PrintWriter out;
-    private BufferedReader in;
+public class SimpleServerSocket implements Runnable, Serializable {
+    transient private ServerSocket serverSocket;
+    transient private Socket clientSocket;
+    transient private PrintWriter out;
+    transient private BufferedReader in;
     public SimpleServerSocket(int port) {
         try {
             serverSocket = new ServerSocket(port);

@@ -75,27 +75,33 @@ public class CLIOptionsTest extends Assert{
     @Test
     @UseDataProvider("cliOptionsData")
     public void getDataTest(String[] input, LocalDate date, File file,LocalTime time) throws ParseException {
-      CLIOptions.setCommandLine(input);
-        assertEquals(date,CLIOptions.getDate());
+      CLIOptions cliOptions=new CLIOptions(input);
+        assertEquals(date,cliOptions.getDate());
     }
     @Test
     @UseDataProvider("cliOptionsData")
     public void getTimeTest(String[] input, LocalDate date, File file, LocalTime time) throws ParseException {
-        CLIOptions.setCommandLine(input);
-        assertEquals(time,CLIOptions.getTime());
+        CLIOptions cliOptions=new CLIOptions(input);
+        assertEquals(time,cliOptions.getTime());
     }
     @Test
     @UseDataProvider("cliOptionsData")
     public void getFileTest(String[] input, LocalDate date,File file,LocalTime time) throws ParseException {
-        CLIOptions.setCommandLine(input);
-        assertEquals(file,CLIOptions.getFile());
+        CLIOptions cliOptions=new CLIOptions(input);
+        assertEquals(file,cliOptions.getFile());
     }
     @Test(expected = IllegalArgumentException.class)
     @UseDataProvider("cliOptionsExceptionData")
     public void testGetDataException(String[] input) throws ParseException {
-        CLIOptions.setCommandLine(input);
-        CLIOptions.getDate();
-        CLIOptions.getFile();
-        CLIOptions.getTime();
+        CLIOptions cliOptions=new CLIOptions(input);
+        cliOptions.getDate();
+        cliOptions.getFile();
+        cliOptions.getTime();
+    }
+
+    @Test
+    public void testGetFile1() throws Exception {
+        MyCLIOptions cliOptions=new MyCLIOptions(new String[]{"-f1", "pom.xml"});
+        assertEquals(new File("/home/lsp/IdeaProjects/CLIApp/pom.xml"),cliOptions.getFile1());
     }
 }

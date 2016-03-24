@@ -4,44 +4,18 @@ import org.apache.commons.cli.*;
 
 import java.io.File;
 import java.io.PrintWriter;
-import java.text.DateFormat;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class CLIOptions {
-    private static CommandLine commandLine;
-    private static Options options;
 
-    public static void printHelp(final Options options) //метод для вывода справки
-    {
-        final PrintWriter writer = new PrintWriter(System.out);// куда печатаем help
-        final HelpFormatter helpFormatter = new HelpFormatter();// создаем объект для вывода help`а
-        helpFormatter.printHelp(
-                writer,
-                80, // ширина строки вывода
-                "java -jar test.jar", //подсказка по запуску самой программы
-                "Options",  // строка перед выводом справки
-                options,
-                3, // число пробелов перед выводом опции
-                5, // число пробелов перед выводом опцисания опции
-                "-end help-", // строка следующая за выводом
-                true);//формирование справки
-        writer.flush(); // вывод
-    }
+    protected CommandLine commandLine;
+    protected Options options;
 
-    public static void setCommandLine(String[] args) throws ParseException {
-
-        CommandLineParser parser = new DefaultParser(); // объект для разбора командной строки
-        options = new Options();//Опции командной строки, можно создавать по отдельности
+    protected void setOptions(Options options){
         options.addOption("h", "help", false, "print this message");
         options.addOption(Option.builder("d") // короткая опция
                 .longOpt("date") // длинная опция -ааа=ббббб
@@ -61,11 +35,35 @@ public class CLIOptions {
                 .desc("enter filename")
                 .argName("FILE")
                 .build());
+    }
+
+    public void printHelp(final Options options) //метод для вывода справки
+    {
+        final PrintWriter writer = new PrintWriter(System.out);// куда печатаем help
+        final HelpFormatter helpFormatter = new HelpFormatter();// создаем объект для вывода help`а
+        helpFormatter.printHelp(
+                writer,
+                80, // ширина строки вывода
+                "java -jar test.jar", //подсказка по запуску самой программы
+                "Options",  // строка перед выводом справки
+                options,
+                3, // число пробелов перед выводом опции
+                5, // число пробелов перед выводом опцисания опции
+                "-end help-", // строка следующая за выводом
+                true);//формирование справки
+        writer.flush(); // вывод
+    }
+
+    public CLIOptions(String[] args) throws ParseException {
+
+        CommandLineParser parser = new DefaultParser(); // объект для разбора командной строки
+        options = new Options();//Опции командной строки, можно создавать по отдельности
+        setOptions(options);
         commandLine = parser.parse(options, args);
         if (commandLine.hasOption("h")) printHelp(options);
     }
 
-    static LocalDate getDate() {
+    LocalDate getDate() {
         if (!commandLine.hasOption("d")) return null;
         String sDate = commandLine.getOptionValue("d");
         String regex = "[0-9]{1,2}-[0-9]{1,2}-[0-9]{4}"; //регулярное выражение для даты
@@ -83,7 +81,7 @@ public class CLIOptions {
         }
     }
 
-    public static LocalTime getTime() {
+    LocalTime getTime() {
         if (!commandLine.hasOption("t")) return null;
         String sTime = commandLine.getOptionValue("t");
         String regex = "[0-9]{1,2}-[0-9]{1,2}(-[0-9]{1,2})?"; //регулярное выражение для времени
@@ -103,7 +101,7 @@ public class CLIOptions {
 
     }
 
-    static File getFile() {
+    File getFile() {
         if (!commandLine.hasOption("f")) return null;
         String sDate = commandLine.getOptionValue("f");
         File file = new File(sDate);
@@ -111,4 +109,29 @@ public class CLIOptions {
         return file.getAbsoluteFile();
     }
 
+}
+class MyCLIOptions extends CLIOptions{
+
+    public MyCLIOptions(String[] args) throws ParseException {
+        super(args);
+    }
+
+    @Override
+    protected void setOptions(Options options) {
+        super.setOptions(options);
+        options.addOption(Option.builder("f1")
+                .hasArg()
+                .longOpt("file1")
+                .desc("enter filename")
+                .argName("FILE")
+                .build());
+    }
+
+    File getFile1() {
+        if (!commandLine.hasOption("f1")) return null;
+        String sDate = commandLine.getOptionValue("f1");
+        File file = new File(sDate);
+        if (!file.exists()) throw new IllegalArgumentException("uncorrect filename = " + sDate);
+        return file.getAbsoluteFile();
+    }
 }

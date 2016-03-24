@@ -4,10 +4,7 @@ import org.junit.*;
 import org.junit.rules.Timeout;
 import org.junit.runners.MethodSorters;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.io.PrintWriter;
+import java.io.*;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.UnknownHostException;
@@ -51,7 +48,7 @@ public class SimpleServerSocketTest {
         serverSocket.getOut().println("hello");
         assertEquals("hello",in.readLine());
     }
-
+/*
     @Test
     public void a3testLoopSocket() throws Exception {
         Thread thread=new Thread(serverSocket);
@@ -62,5 +59,16 @@ public class SimpleServerSocketTest {
         out.println("quit");out.flush();
         Thread.sleep(10);
         assertFalse(thread.isAlive());
+    }
+*/
+    @Test
+    public void a4testSerializable() throws IOException, ClassNotFoundException {
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("temp.out"));
+        oos.writeObject(serverSocket);
+        oos.flush();oos.close();
+        serverSocket.closeSocket();
+        ObjectInputStream ois=new ObjectInputStream(new FileInputStream("temp.out"));
+        SimpleServerSocket serverSocket1=(SimpleServerSocket)ois.readObject();
+        assertNotNull(serverSocket1);
     }
 }

@@ -10,11 +10,10 @@ import java.time.format.DateTimeFormatter;
 
 public class App
 {
-    public static void main( String[] args ) throws ParseException, ClassNotFoundException, IOException {
-        //CLIOptions.setCommandLine(args);
-        //CLIOptions.getDate().format(DateTimeFormatter.BASIC_ISO_DATE);
-        SimpleServerSocket serverSocket=new SimpleServerSocket(8888);
-        serverSocket.loopSocket();
+    public static void main( String[] args ) throws ParseException {
+        MyCLIOptions cliOptions=new MyCLIOptions(args);
+        System.out.println(cliOptions.getFile().toPath().getFileName());
+        System.out.println(cliOptions.getFile1().toPath().getFileName());
     }
 }
 
