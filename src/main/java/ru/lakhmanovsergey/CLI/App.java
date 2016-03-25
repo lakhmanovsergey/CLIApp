@@ -12,8 +12,6 @@ public class App
 {
     public static void main( String[] args ) throws ParseException {
         MyCLIOptions cliOptions=new MyCLIOptions(args);
-        System.out.println(cliOptions.getFile().toPath().getFileName());
-        System.out.println(cliOptions.getFile1().toPath().getFileName());
     }
 }
 
