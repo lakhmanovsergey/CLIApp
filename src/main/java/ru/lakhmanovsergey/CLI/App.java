@@ -14,7 +14,7 @@ public class App
         MyCLIOptions cliOptions=new MyCLIOptions(args);
         try {
             MergeLists mergeLists=new MergeLists(cliOptions.getFile(),cliOptions.getFile1());
-            mergeLists.listOut(mergeLists.getListOut());
+            mergeLists.listPrint(mergeLists.getListOut());
         } catch (IOException e) {
             System.out.println("uncorrect filenames "+cliOptions.getFile().toString()+" "+cliOptions.getFile1().toString());
             System.out.println(e.getMessage());

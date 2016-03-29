@@ -12,7 +12,7 @@ public class MergeLists {
     public MergeLists(File list1File,File list2File) throws IOException {
         list1=fileReader(list1File);
         list2=fileReader(list2File);
-        listOut=merging(list1,list2);
+        //listOut=merging(list1,list2);
     }
 
     private List<String[]> fileReader(File file) throws IOException {
@@ -20,8 +20,9 @@ public class MergeLists {
         String line;
         BufferedReader reader=new BufferedReader(new FileReader(file));
         while ((line=reader.readLine())!=null){
-            String[] record;
-            record=line.split(" ");
+            String s=line.replaceAll("^\\s*","");
+            line=s.replaceAll("\\s*$","");
+            String[] record=line.split("\\s*;\\s*");
             result.add(record);
         }
         return result;
@@ -35,14 +36,13 @@ public class MergeLists {
         return list2;
     }
 
-    public List<String[]> getListOut() {
-        return listOut;
-    }
+    public List<String[]> getListOut() { return listOut; }
 
-    public void listOut(List<String[]> list){
+    public void listPrint(List<String[]> list){
         for (String[] record : list) {
             for (String s : record) {
-                System.out.print(s.isEmpty()?"NULL":s+" : ");
+                System.out.print(s.isEmpty()?"NULL":s+":");
+                //System.out.print(s);
             }
             System.out.println();
         }

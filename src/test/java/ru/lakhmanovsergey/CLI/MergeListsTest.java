@@ -13,8 +13,8 @@ public class MergeListsTest {
 
     @Test
     public void testTestOut() throws Exception {
-        MergeLists mergeLists=new MergeLists(new File("data/fping.out"),new File("data/arp.out"));
-        mergeLists.listOut(mergeLists.getListOut());
-        //mergeLists.listOut(mergeLists.getList2());
+        MergeLists mergeLists=new MergeLists(new File("data/users.csv"),new File("data/mailusers.csv"));
+        //mergeLists.listPrint(mergeLists.getList1());
+        mergeLists.listPrint(mergeLists.getList2());
     }
 }
