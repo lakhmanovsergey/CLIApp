@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MergeLists {
+public class MergeLists implements Serializable{
     private List<String[]> list1;
     private List<String[]> list2;
     private List<String[]> listOut;
