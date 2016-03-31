@@ -1,7 +1,9 @@
 package ru.lakhmanovsergey.CLI;
 
 import java.io.*;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MergeLists implements Serializable{
@@ -12,7 +14,7 @@ public class MergeLists implements Serializable{
     public MergeLists(File list1File,File list2File) throws IOException {
         list1=fileReader(list1File);
         list2=fileReader(list2File);
-        //listOut=merging(list1,list2);
+        listOut=mergingMailboxes(list1,list2);
     }
 
     private List<String[]> fileReader(File file) throws IOException {
@@ -42,18 +44,29 @@ public class MergeLists implements Serializable{
         for (String[] record : list) {
             for (String s : record) {
                 System.out.print(s.isEmpty()?"NULL":s+":");
-                //System.out.print(s);
             }
             System.out.println();
         }
     }
-    private List<String[]> merging(List<String[]> list1,List<String[]> list2){
+    private List<String[]> mergingMacAddress(List<String[]> list1,List<String[]> list2){
         List<String[]> result=new ArrayList<String[]>();
         for (String[] record1 : list1) {
             for (String[] record2 : list2) {
                 if (record2.length>1&record1[0].equals(record2[0])) {
                     String[] recOut = new String[]{record1[0], record2[1]};
                     result.add(recOut);
+                }
+            }
+        }
+        return result;
+    }
+    private List<String[]> mergingMailboxes(List<String[]> list1,List<String[]> list2){
+        List<String[]> result=new ArrayList<String[]>();
+        for (String[] record1 : list1) {
+            for (String[] record2 : list2) {
+                if (record2.length>1&&record2[1].contains(record1[0].replaceAll("\\s*$",""))){
+                    String[] tempStr=new String[]{record1[0],record1[1],record1[2],record2[0]};
+                    result.add(tempStr);
                 }
             }
         }

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ea07a02-fa02-49a4-918d-7ed056f7cf14" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/App.class" afterPath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/App.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java" afterPath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MergeListsTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MergeListsTest.java" />
@@ -52,22 +51,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeLists.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MergeLists.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.806452">
-              <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-              <folding />
+            <state vertical-scroll-proportion="0.3855932">
+              <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2069#2079#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MergeListsTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MergeListsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MergeListsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31779662">
-              <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1652#1653#0" expanded="true" />
+                <element signature="e#1713#1714#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,8 +124,8 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/AddMailsToUsers.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/App.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java" />
         <option value="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MergeListsTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java" />
       </list>
     </option>
   </component>
@@ -165,9 +171,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1961" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1559" />
-    <option name="height" value="1071" />
+    <option name="height" value="1099" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -216,8 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -290,6 +294,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -839,7 +845,10 @@
       <workItem from="1459149544666" duration="5679000" />
       <workItem from="1459169983618" duration="6012000" />
       <workItem from="1459262510723" duration="2983000" />
-      <workItem from="1459335517282" duration="2347000" />
+      <workItem from="1459335517282" duration="2384000" />
+      <workItem from="1459352936671" duration="3000" />
+      <workItem from="1459405560818" duration="5005000" />
+      <workItem from="1459420608643" duration="4178000" />
     </task>
     <task id="LOCAL-00001" summary="date time file command line">
       <created>1455634311782</created>
@@ -919,46 +928,52 @@
       <option name="project" value="LOCAL" />
       <updated>1459265562727</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="date time file command line">
+      <created>1459352902393</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1459352902393</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MergeListsTest - 2016.03.29 at 18h 29m 23s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 11h 05m 25s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.29 at 18h 30m 16s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 11h 06m 16s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.29 at 18h 30m 26s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 11h 07m 03s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.29 at 18h 31m 47s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 11h 07m 31s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.29 at 18h 31m 56s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 11h 08m 11s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.29 at 18h 31m 59s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 14h 21m 39s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.30 at 13h 59m 27s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 14h 24m 30s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.30 at 18h 38m 53s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 14h 28m 07s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.30 at 18h 43m 15s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 14h 32m 48s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MergeListsTest - 2016.03.30 at 18h 44m 36s.xml">
+    <history-entry file="MergeListsTest - 2016.03.31 at 14h 36m 43s.xml">
       <configuration name="MergeListsTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98172000" />
+    <option name="totallyTimeSpent" value="107395000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1961" y="24" width="1559" height="1071" extended-state="6" />
+    <frame x="1961" y="-4" width="1559" height="1099" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -968,7 +983,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969853" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998997" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25977933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25977933" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21680565" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1406,23 +1421,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33333334">
           <caret line="2866" column="18" selection-start-line="2866" selection-start-column="18" selection-end-line="2866" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.806452">
-          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MergeListsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31779662">
-          <caret line="19" column="45" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="82" selection-start-line="43" selection-start-column="82" selection-end-line="43" selection-end-column="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1652#1653#0" expanded="true" />
+            <element signature="e#1713#1714#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3855932">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2069#2079#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
