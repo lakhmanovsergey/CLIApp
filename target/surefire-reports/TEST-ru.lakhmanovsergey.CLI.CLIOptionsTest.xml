@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="40" failures="0" name="ru.lakhmanovsergey.CLI.CLIOptionsTest" time="0.306" errors="0" skipped="0">
+  <properties>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/amd64"/>
+    <property name="java.vm.version" value="25.72-b15"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="path.separator" value=":"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/lsp/IdeaProjects/CLIApp"/>
+    <property name="java.runtime.version" value="1.8.0_72-b15"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="3.16.0-60-generic"/>
+    <property name="user.home" value="/home/lsp"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="java.awt.printerjob" value="sun.print.PSPrinterJob"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="user.name" value="lsp"/>
+    <property name="java.class.path" value="/usr/share/maven/boot/plexus-classworlds-2.x.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="/usr/lib/jvm/java-8-oracle/jre"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="en"/>
+    <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_72"/>
+    <property name="java.ext.dirs" value="/usr/lib/jvm/java-8-oracle/jre/lib/ext:/usr/java/packages/lib/ext"/>
+    <property name="securerandom.source" value="file:/dev/./urandom"/>
+    <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-8-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-8-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-8-oracle/jre/lib/jfr.jar:/usr/lib/jvm/java-8-oracle/jre/classes"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="/usr/share/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="gnome"/>
+    <property name="sun.cpu.isalist" value=""/>
+  </properties>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetFile1" time="0.065"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[0: &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[1: [-h]\u002C &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;]" time="0.009"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[2: [-d\u002C 13-05-2014\u002C -t\u002C 13-20-40]\u002C 2014-05-13\u002C &lt;null&gt;\u002C 13:20:40]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[3: [-d\u002C 01-12-1538\u002C -t\u002C 11-00]\u002C 1538-12-01\u002C &lt;null&gt;\u002C 11:00]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[4: [-d\u002C 31-05-1971\u002C -t\u002C 23-5-20]\u002C 1971-05-31\u002C &lt;null&gt;\u002C 23:05:20]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[5: [-d\u002C 29-2-2016\u002C -t\u002C 00-30]\u002C 2016-02-29\u002C &lt;null&gt;\u002C 00:30]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[6: [-f\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml]\u002C &lt;null&gt;\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getDataTest[7: [-f\u002C pom.xml]\u002C &lt;null&gt;\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[0: &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[1: [-h]\u002C &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[2: [-d\u002C 13-05-2014\u002C -t\u002C 13-20-40]\u002C 2014-05-13\u002C &lt;null&gt;\u002C 13:20:40]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[3: [-d\u002C 01-12-1538\u002C -t\u002C 11-00]\u002C 1538-12-01\u002C &lt;null&gt;\u002C 11:00]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[4: [-d\u002C 31-05-1971\u002C -t\u002C 23-5-20]\u002C 1971-05-31\u002C &lt;null&gt;\u002C 23:05:20]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[5: [-d\u002C 29-2-2016\u002C -t\u002C 00-30]\u002C 2016-02-29\u002C &lt;null&gt;\u002C 00:30]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[6: [-f\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml]\u002C &lt;null&gt;\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getTimeTest[7: [-f\u002C pom.xml]\u002C &lt;null&gt;\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[0: &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[1: [-h]\u002C &lt;null&gt;\u002C &lt;null&gt;\u002C &lt;null&gt;]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[2: [-d\u002C 13-05-2014\u002C -t\u002C 13-20-40]\u002C 2014-05-13\u002C &lt;null&gt;\u002C 13:20:40]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[3: [-d\u002C 01-12-1538\u002C -t\u002C 11-00]\u002C 1538-12-01\u002C &lt;null&gt;\u002C 11:00]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[4: [-d\u002C 31-05-1971\u002C -t\u002C 23-5-20]\u002C 1971-05-31\u002C &lt;null&gt;\u002C 23:05:20]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[5: [-d\u002C 29-2-2016\u002C -t\u002C 00-30]\u002C 2016-02-29\u002C &lt;null&gt;\u002C 00:30]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[6: [-f\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml]\u002C &lt;null&gt;\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="getFileTest[7: [-f\u002C pom.xml]\u002C &lt;null&gt;\u002C \/home\/lsp\/IdeaProjects\/CLIApp\/pom.xml\u002C &lt;null&gt;]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[0: [-d\u002C 13-0]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[1: [-d\u002C test]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[2: [-d\u002C 65736457654]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[3: [-d\u002C 15-58-2015]]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[4: [-d\u002C 13.11.2018]]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[5: [-d\u002C 31-04-2014]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[6: [-d\u002C 29-02-2013]]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[7: [-f\u002C blablabla]]" time="0.011"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[8: [-f\u002C &amp;65*%]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[9: [-f\u002C ggffdd kkkl;ll]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[10: [-f\u002C test]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[11: [-t\u002C test]]" time="0.001"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[12: [-t\u002C 38-11-40]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[13: [-t\u002C 23-72]]" time="0"/>
+  <testcase classname="ru.lakhmanovsergey.CLI.CLIOptionsTest" name="testGetDataException[14: [-t\u002C 10-55-77]]" time="0.001"/>
+</testsuite>

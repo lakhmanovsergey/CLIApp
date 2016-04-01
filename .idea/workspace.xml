@@ -2,9 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ea07a02-fa02-49a4-918d-7ed056f7cf14" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/mergeLists.serial" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/users.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/MergeLists.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/MyCLIOptions.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/ru/lakhmanovsergey/CLI/SimpleServerSocket.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/ru/lakhmanovsergey/CLI/MergeListsTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/ru/lakhmanovsergey/CLI/MockTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/ru/lakhmanovsergey/CLI/SimpleServerSocketTest.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/temp.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/arp.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/fping.out" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/mailusers.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/mergeListsOut.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MockTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.lakhmanovsergey.CLI.CLIOptionsTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.lakhmanovsergey.CLI.MergeListsTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.lakhmanovsergey.CLI.MyCLIOptionsTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-ru.lakhmanovsergey.CLI.SimpleServerSocketTest.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/ru.lakhmanovsergey.CLI.CLIOptionsTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/ru.lakhmanovsergey.CLI.MergeListsTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/ru.lakhmanovsergey.CLI.MyCLIOptionsTest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/ru.lakhmanovsergey.CLI.SimpleServerSocketTest.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java" afterPath="$PROJECT_DIR$/src/main/java/ru/lakhmanovsergey/CLI/MergeLists.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MergeListsTest.java" afterPath="$PROJECT_DIR$/src/test/java/ru/lakhmanovsergey/CLI/MergeListsTest.java" />
     </list>
     <ignored path="CLIApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -840,7 +864,7 @@
       <workItem from="1459352936671" duration="3000" />
       <workItem from="1459405560818" duration="5005000" />
       <workItem from="1459420608643" duration="4246000" />
-      <workItem from="1459514749732" duration="3232000" />
+      <workItem from="1459514749732" duration="3295000" />
     </task>
     <task id="LOCAL-00001" summary="date time file command line">
       <created>1455634311782</created>
@@ -932,7 +956,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459438107298</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="git">
+      <created>1459518716744</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1459518716744</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -968,7 +998,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110695000" />
+    <option name="totallyTimeSpent" value="110758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1961" y="24" width="1559" height="1071" extended-state="6" />
@@ -1017,7 +1047,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="date time file command line" />
-    <option name="LAST_COMMIT_MESSAGE" value="date time file command line" />
+    <MESSAGE value="git" />
+    <option name="LAST_COMMIT_MESSAGE" value="git" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
