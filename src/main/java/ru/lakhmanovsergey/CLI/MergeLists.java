@@ -48,6 +48,21 @@ public class MergeLists implements Serializable{
             System.out.println();
         }
     }
+    public void listWriteToFile(List<String[]> list,File file){
+        try {
+            PrintWriter writer=new PrintWriter(file);
+            for (String[] strings : list) {
+                for (String s : strings) {
+                    writer.print(s.isEmpty()?"NULL":s+";");
+                }
+                writer.println();
+            }
+            writer.flush();writer.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("can not write file: "+file.getName());
+            System.out.println(e.getMessage());
+        }
+    }
     private List<String[]> mergingMacAddress(List<String[]> list1,List<String[]> list2){
         List<String[]> result=new ArrayList<String[]>();
         for (String[] record1 : list1) {
@@ -73,19 +88,5 @@ public class MergeLists implements Serializable{
         return result;
     }
 
-    public void listWriteToFile(List<String[]> list,File file){
-        try {
-            PrintWriter writer=new PrintWriter(file);
-            for (String[] strings : list) {
-                for (String s : strings) {
-                    writer.print(s.isEmpty()?"NULL":s+";");
-                }
-                writer.flush();writer.close();
-            }
-        } catch (FileNotFoundException e) {
-            System.out.println("can not write file: "+file.getName());
-            System.out.println(e.getMessage());
-        }
-    }
 }
 
