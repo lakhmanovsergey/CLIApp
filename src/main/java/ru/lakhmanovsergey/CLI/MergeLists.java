@@ -43,7 +43,7 @@ public class MergeLists implements Serializable{
     public void listPrint(List<String[]> list){
         for (String[] record : list) {
             for (String s : record) {
-                System.out.print(s.isEmpty()?"NULL":s+":");
+                System.out.print(s.isEmpty()?"NULL":s+";");
             }
             System.out.println();
         }
@@ -71,6 +71,21 @@ public class MergeLists implements Serializable{
             }
         }
         return result;
+    }
+
+    public void listWriteToFile(List<String[]> list,File file){
+        try {
+            PrintWriter writer=new PrintWriter(file);
+            for (String[] strings : list) {
+                for (String s : strings) {
+                    writer.print(s.isEmpty()?"NULL":s+";");
+                }
+                writer.flush();writer.close();
+            }
+        } catch (FileNotFoundException e) {
+            System.out.println("can not write file: "+file.getName());
+            System.out.println(e.getMessage());
+        }
     }
 }
 

@@ -34,25 +34,31 @@ public class MergeListsTest{
     @Before
     public void testTestInit() throws Exception {
         mergeLists = new MergeLists(new File("data/users.csv"),new File("data/mailusers.csv"));
-        ObjectInputStream ois=new ObjectInputStream(new FileInputStream("data/mergeLists.out"));
-        mergeListsOld = (MergeLists)ois.readObject();
-        ois.close();
+        //ObjectInputStream ois=new ObjectInputStream(new FileInputStream("data/mergeLists.serial"));
+        //mergeListsOld = (MergeLists)ois.readObject();
+        //ois.close();
     }
 
     @Test
+    public void setSerialization() throws IOException {
+        ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("data/mergeLists.serial"));
+        oos.writeObject(mergeLists);
+    }
+    //@Test
     public void testTestList1() throws Exception {
         assertTrue(isEqualsLists(mergeListsOld.getList1(),mergeLists.getList1()));
         //mergeLists.listPrint(mergeLists.getList2());
     }
 
-    @Test
+    //@Test
     public void testTestList2() throws Exception {
         assertTrue(isEqualsLists(mergeListsOld.getList2(),mergeLists.getList2()));
         //mergeLists.listPrint(mergeLists.getList2());
     }
 
     @Test
-    public void testMergeMailboxes(){
-        mergeLists.listPrint(mergeLists.getListOut());
-    }
+    public void testMergeMailboxes(){mergeLists.listPrint(mergeLists.getListOut());}
+
+    @Test
+    public void testListWriteToFile(){mergeLists.listWriteToFile(mergeLists.getListOut(),new File("data/mergeListsOut.csv"));}
 }
