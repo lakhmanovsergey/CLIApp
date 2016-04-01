@@ -864,7 +864,7 @@
       <workItem from="1459352936671" duration="3000" />
       <workItem from="1459405560818" duration="5005000" />
       <workItem from="1459420608643" duration="4246000" />
-      <workItem from="1459514749732" duration="3295000" />
+      <workItem from="1459514749732" duration="3583000" />
     </task>
     <task id="LOCAL-00001" summary="date time file command line">
       <created>1455634311782</created>
@@ -998,7 +998,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110758000" />
+    <option name="totallyTimeSpent" value="111046000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1961" y="24" width="1559" height="1071" extended-state="6" />
