@@ -1,6 +1,7 @@
 package ru.lakhmanovsergey.CLI;
 
 import org.codehaus.plexus.util.CollectionUtils;
+import org.codehaus.plexus.util.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -44,27 +45,32 @@ public class MergeListsTest{
         ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream("data/mergeLists.serial"));
         oos.writeObject(mergeLists);
     }
-    @Test
+    //@Test
     public void testTestList1() throws Exception {
         assertTrue(isEqualsLists(mergeListsOld.getList1(),mergeLists.getList1()));
         //mergeLists.listPrint(mergeLists.getList2());
     }
 
-    @Test
+    //@Test
     public void testTestList2() throws Exception {
         assertTrue(isEqualsLists(mergeListsOld.getList2(),mergeLists.getList2()));
         //mergeLists.listPrint(mergeLists.getList2());
     }
 
-    @Test
+    //@Test
     public void testTestListOut() throws Exception {
         assertTrue(isEqualsLists(mergeListsOld.getListOut(),mergeLists.getListOut()));
         //mergeLists.listPrint(mergeLists.getList2());
     }
 
-    @Test
+    //@Test
     public void testMergeMailboxes(){mergeLists.listPrint(mergeLists.getListOut());}
 
     @Test
-    public void testListWriteToFile(){mergeLists.listWriteToFile(mergeLists.getListOut(),new File("data/mergeListsOut.csv"));}
+    public void testListWriteToFile() throws IOException {
+        File newFile=new File("data/mergeListsOutNew.csv");
+        File oldFile=new File("data/mergeListsOut.csv");
+        mergeLists.listWriteToFile(mergeLists.getListOut(),newFile);
+        assertTrue(FileUtils.contentEquals(oldFile,newFile));
+    }
 }
